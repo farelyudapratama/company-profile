@@ -19,6 +19,63 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Generic animation for all elements with the class 'animate-on-scroll'
+            gsap.utils.toArray('.animate-on-scroll').forEach((element, index) => {
+                gsap.from(element, {
+                    scrollTrigger: {
+                        trigger: element,
+                        start: 'top 85%',
+                        toggleActions: 'play none none reverse'
+                    },
+                    opacity: 0,
+                    y: 50,
+                    duration: 0.6,
+                    delay: index * 0.2
+                });
+            });
+
+            gsap.utils.toArray('.grid-cols-1 > div').forEach((card, index) => {
+                gsap.from(card, {
+                    scrollTrigger: {
+                        trigger: card,
+                        start: 'top 85%',
+                        toggleActions: 'play none none reverse'
+                    },
+                    opacity: 0,
+                    y: 50,
+                    duration: 0.6,
+                    delay: index * 0.2
+                });
+            });
+
+            gsap.utils.toArray('.flex-wrap img').forEach((img, index) => {
+                gsap.from(img, {
+                    scrollTrigger: {
+                        trigger: img,
+                        start: 'top 85%',
+                        toggleActions: 'play none none reverse'
+                    },
+                    opacity: 0,
+                    y: 50,
+                    duration: 0.7,
+                    delay: index * 0.2
+                });
+            });
+
+            gsap.to('html, body', {
+                scrollBehavior: 'smooth',
+                duration: 1
+            });
+        });
+    </script>
+
     <!-- Tailwind CSS for vercel-->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>

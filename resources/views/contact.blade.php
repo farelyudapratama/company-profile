@@ -1,9 +1,10 @@
 <x-layout>
     <x-slot name="title">{{ 'Diskusikan Project Dengan Kami' }}</x-slot>
 
-    <div class="max-w-4xl mx-auto text-center mt-10">
-        <h2 class="text-3xl font-bold mb-3">Punya Ide? Yuk, Ngobrol!</h2>
-        <p class="text-lg mb-6">Ceritakan ide kamu, biar kami bantu wujudkan jadi solusi digital yang keren dan tepat
+    <div class="max-w-4xl mx-auto text-center mt-10 animate-on-scroll">
+        <h2 class="text-3xl font-bold mb-3 animate-on-scroll">Punya Ide? Yuk, Ngobrol!</h2>
+        <p class="text-lg mb-6 animate-on-scroll">Ceritakan ide kamu, biar kami bantu wujudkan jadi solusi digital yang
+            keren dan tepat
             guna.</p>
     </div>
 
@@ -49,8 +50,8 @@
 
     </div> --}}
 
-    <div class="mt-6 grid md:grid-cols-2 gap-8">
-        <div class="h-[400px]">
+    <div class="mt-6 grid md:grid-cols-2 gap-8 animate-on-scroll">
+        <div class="h-[400px] animate-on-scroll">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.6093530724391!2d107.00881886960683!3d-6.205889966365447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6989567f198041%3A0xbc9af43b6461c609!2sJl.%20Vila%20Mas%20Garden%2C%20RT.007%2FRW.009%2C%20Perwira%2C%20Kec.%20Bekasi%20Utara%2C%20Kota%20Bks%2C%20Jawa%20Barat%2017122!5e0!3m2!1sid!2sid!4v1729733985318!5m2!1sid!2sid"
                 class="w-full h-full rounded-lg" style="border:0;" allowfullscreen="" loading="lazy"
@@ -58,7 +59,7 @@
             </iframe>
         </div>
 
-        <div class="space-y-8">
+        <div class="space-y-8 animate-on-scroll">
             <h2 class="text-2xl font-semibold text-gray-900">Kontak Kami</h2>
             <div class="space-y-6">
                 <div class="flex items-start space-x-4">

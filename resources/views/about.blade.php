@@ -3,29 +3,29 @@
 
     <div class="flex flex-col md:flex-row p-4 md:p-6">
         <div class="md:w-2/3 mb-4 md:mb-0 md:pr-6">
-            <p class="text-gray-700 mb-4">
+            <p class="text-gray-700 mb-4 animate-on-scroll">
                 Kami adalah <strong>PT. Sigma Teknologi Inovasi Nusantara</strong>, lahir di tahun 2024 untuk membantu
                 bisnis siap tempur di dunia digital. Misi kami simpel: bikin teknologi yang bikin hidup lebih mudah,
                 terutama buat UMKM yang ingin berkembang di era serba cepat ini.
             </p>
-            <p class="text-gray-700 mb-4">
+            <p class="text-gray-700 mb-4 animate-on-scroll">
                 Kita nggak pakai bahasa rumit, kita nggak kasih solusi ribet. Dengan tim yang ngerti banget teknologi
                 terkini, kita hadir untuk jadi partner yang bisa diandalkan. Mau efisiensi? Mau bisnis makin lincah?
                 Kami punya caranya!
             </p>
-            <p class="text-gray-700">
+            <p class="text-gray-700 animate-on-scroll">
                 Dari Bekasi, kita siap bantu bisnis kamu <em>grow</em> dengan teknologi yang tepat, biar kamu bisa fokus
                 pada hal-hal yang paling penting: bikin bisnis makin besar dan tetap relevan di zaman sekarang. Yuk,
                 bareng kita kembangkan masa depan!
             </p>
         </div>
-        <div class="md:w-1/3">
+        <div class="md:w-1/3 animate-on-scroll">
             <img src="img/design2.jpg" alt="Gambar Ilustrasi" class="w-full h-auto rounded-lg shadow-md">
         </div>
     </div>
 
-    <div class="p-4 md:p-6  rounded-lg mt-6">
-        <h2 class="text-xl md:text-2xl font-bold text-gray-800 text-center mb-6">
+    <div class="p-4 md:p-6  rounded-lg mt-6 ">
+        <h2 class="text-xl md:text-2xl font-bold text-gray-800 text-center mb-6 animate-on-scroll">
             Kenapa Memilih Kami <i class="fas fa-question-circle text-blue-600 mr-2"></i>
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -66,35 +66,35 @@
 
     <div class="p-4 md:p-6  rounded-lg mt-6">
         <div class="grid md:grid-cols-2 gap-6">
-            <div class="bg-white p-6 rounded-lg shadow-sm">
-                <div class="flex items-center mb-4">
+            <div class="bg-white p-6 rounded-lg shadow-sm animate-on-scroll">
+                <div class="flex items-center mb-4 animate-on-scroll">
                     <i class="fas fa-eye text-2xl text-blue-600 mr-3"></i>
                     <h2 class="text-xl md:text-2xl font-bold text-gray-800">Visi</h2>
                 </div>
-                <p class="text-gray-700 leading-relaxed">
+                <p class="text-gray-700 leading-relaxed animate-on-scroll">
                     Menjadi perusahaan teknologi terdepan di Indonesia yang menghadirkan solusi inovatif berkelanjutan
                     untuk
                     memajukan transformasi digital nusantara.
                 </p>
             </div>
 
-            <div class="bg-white p-6 rounded-lg shadow-sm">
-                <div class="flex items-center mb-4">
+            <div class="bg-white p-6 rounded-lg shadow-sm animate-on-scroll">
+                <div class="flex items-center mb-4 animate-on-scroll">
                     <i class="fas fa-bullseye text-2xl text-blue-600 mr-3"></i>
                     <h2 class="text-xl md:text-2xl font-bold text-gray-800">Misi</h2>
                 </div>
                 <ul class="space-y-3 text-gray-700">
-                    <li class="flex items-start">
+                    <li class="flex items-start animate-on-scroll">
                         <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
                         <span>Mengembangkan produk dan layanan teknologi yang inovatif dan berkualitas tinggi untuk
                             memenuhi kebutuhan pasar Indonesia</span>
                     </li>
-                    <li class="flex items-start">
+                    <li class="flex items-start animate-on-scroll">
                         <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
                         <span>Memberikan solusi teknologi yang efisien dan efektif untuk meningkatkan daya saing bisnis
                             klien</span>
                     </li>
-                    <li class="flex items-start">
+                    <li class="flex items-start animate-on-scroll">
                         <i class="fas fa-check text-blue-600 mt-1 mr-2"></i>
                         <span>Membangun ekosistem digital yang mendorong pertumbuhan ekonomi dan pembangunan
                             berkelanjutan di
@@ -105,8 +105,8 @@
         </div>
     </div>
 
-    <div class="p-4 md:p-6 rounded-lg mt-6">
-        <div class="flex items-center mb-6">
+    <div class="p-4 md:p-6 rounded-lg mt-6 animate-on-scroll">
+        <div class="flex items-center mb-6 animate-on-scroll">
             <i class="fas fa-users text-2xl text-blue-600 mr-3"></i>
             <h2 class="text-xl md:text-2xl font-bold text-gray-800">Tim Kami</h2>
         </div>
