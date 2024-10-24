@@ -3,7 +3,7 @@
         <div class="flex lg:flex-1">
             <a href="/" class="-m-1.5 p-1.5 flex items-center group">
                 <span class="sr-only">Sigma Teknologi Inovasi Nusantara</span>
-                <img class="h-8 w-auto" src="img/sigmalogo.png" alt="Company Logo">
+                <img class="h-8 w-auto" src="{{ asset('img/sigmalogo.png') }}" alt="Company Logo">
                 <div class="ml-4 flex flex-col">
                     <span class="text-xl font-bold text-red-100">Sigma Teknologi</span>
                     <span class="text-sm font-semibold text-gray-200">Inovasi Nusantara</span>
