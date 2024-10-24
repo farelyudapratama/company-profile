@@ -226,4 +226,91 @@
         </div>
     </div>
 
+    <div class="p-4 md:p-6 rounded-lg mt-6 animate-on-scroll">
+        <div class="flex items-center mb-6 animate-on-scroll">
+            <i class="fas fa-certificate text-2xl text-blue-600 mr-3"></i>
+            <h2 class="text-xl md:text-2xl font-bold text-gray-800">Sertifikat Kami</h2>
+        </div>
+        <div id="certificateGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+
+    <!-- Modal untuk menampilkan gambar besar -->
+    <div id="imageModal" class="z-50 fixed inset-0 bg-black bg-opacity-75 items-center justify-center hidden">
+        <span class="absolute top-4 right-4 text-white text-3xl cursor-pointer" onclick="closeModal()">&times;</span>
+        <img id="modalImage" class="max-w-full max-h-full">
+    </div>
+
+    <script>
+        const certificates = [{
+                src: 'img/sertif/sertif1.jpg',
+                alt: 'Sertifikat 1'
+            },
+            {
+                src: 'img/sertif/sertif2.jpg',
+                alt: 'Sertifikat 2'
+            },
+            {
+                src: 'img/sertif/sertif3.jpg',
+                alt: 'Sertifikat 3'
+            },
+            {
+                src: 'img/sertif/sertif4.jpg',
+                alt: 'Sertifikat 4'
+            },
+            {
+                src: 'img/sertif/sertif5.jpg',
+                alt: 'Sertifikat 5'
+            },
+            {
+                src: 'img/sertif/sertif6.jpg',
+                alt: 'Sertifikat 6'
+            },
+            {
+                src: 'img/sertif/sertif7.jpg',
+                alt: 'Sertifikat 7'
+            },
+        ];
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        function renderCertificates() {
+            const grid = document.getElementById('certificateGrid');
+            shuffleArray(certificates); // Acak urutan gambar
+
+            certificates.forEach(cert => {
+                const div = document.createElement('div');
+                div.className =
+                    'bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group';
+                div.innerHTML = `
+                    <div class="relative">
+                        <img src="${cert.src}" alt="${cert.alt}" class="w-full h-96 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <i class="fas fa-search-plus text-white text-4xl cursor-pointer" onclick="openModal('${cert.src}')"></i>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(div);
+            });
+        }
+
+        function openModal(imageSrc) {
+            document.getElementById("modalImage").src = imageSrc;
+            document.getElementById("imageModal").classList.remove("hidden");
+        }
+
+        function closeModal() {
+            document.getElementById("imageModal").classList.add("hidden");
+        }
+
+        // Render gambar saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', renderCertificates);
+    </script>
+
+
+
 </x-layout>
