@@ -68,9 +68,9 @@
 
         <h3 class="text-xl md:text-2xl font-bold text-gray-800 text-center mt-12 mb-6">Portofolio Kami 🎨</h3>
         <div class="flex flex-wrap justify-center gap-4 mb-8">
-            <img src="img/projects/project.jpg" alt="Proyek 1" class="w-1/2 md:w-1/4 rounded-lg shadow-md">
-            <img src="img/projects/project.jpg" alt="Proyek 2" class="w-1/2 md:w-1/4 rounded-lg shadow-md">
-            <img src="img/projects/project.jpg" alt="Proyek 3" class="w-1/2 md:w-1/4 rounded-lg shadow-md">
+            <img src="img/projects/project1.jpg" alt="Proyek 1" class="w-1/2 md:w-1/4 rounded-lg shadow-md">
+            <img src="img/projects/project2.jpg" alt="Proyek 2" class="w-1/2 md:w-1/4 rounded-lg shadow-md">
+            <img src="img/projects/project3.jpg" alt="Proyek 3" class="w-1/2 md:w-1/4 rounded-lg shadow-md">
         </div>
 
         <div class="text-center mb-12">

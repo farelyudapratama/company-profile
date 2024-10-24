@@ -20,8 +20,7 @@
             </p>
         </div>
         <div class="md:w-1/3">
-            <img src="{{ asset('path/to/your/image.jpg') }}" alt="Gambar Ilustrasi"
-                class="w-full h-auto rounded-lg shadow-md">
+            <img src="img/design2.jpg" alt="Gambar Ilustrasi" class="w-full h-auto rounded-lg shadow-md">
         </div>
     </div>
 

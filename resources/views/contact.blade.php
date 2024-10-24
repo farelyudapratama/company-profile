@@ -7,7 +7,7 @@
             guna.</p>
     </div>
 
-    <div class="bg-white rounded-lg shadow-lg p-6">
+    {{-- <div class="bg-white rounded-lg shadow-lg p-6">
         <p class="text-gray-600 mt-2">Kamu dapat membuat janji atau berdiskusi tentang perusahaan atau produk kamu
             melalui <span class="font-semibold">melalui formulir dibawah ini.</span> </p>
 
@@ -47,7 +47,7 @@
             </div>
         </form>
 
-    </div>
+    </div> --}}
 
     <div class="mt-6 grid md:grid-cols-2 gap-8">
         <div class="h-[400px]">
