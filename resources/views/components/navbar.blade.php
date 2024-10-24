@@ -36,9 +36,9 @@
                 style="color: #1C2559; hover:color: #BF0426;">Home</a>
             <a href="/about" class="text-base font-semibold leading-6 transition-colors duration-200"
                 style="color: #1C2559; hover:color: #BF0426;">Tentang Kami</a>
-            <a href="#" class="text-base font-semibold leading-6 transition-colors duration-200"
+            <a href="/services" class="text-base font-semibold leading-6 transition-colors duration-200"
                 style="color: #1C2559; hover:color: #BF0426;">Layanan</a>
-            <a href="#" class="text-base font-semibold leading-6 transition-colors duration-200"
+            <a href="/projects" class="text-base font-semibold leading-6 transition-colors duration-200"
                 style="color: #1C2559; hover:color: #BF0426;">Project</a>
             <a href="/contact" class="text-base font-semibold leading-6 transition-colors duration-200"
                 style="color: #1C2559; hover:color: #BF0426;">Kontak</a>
@@ -66,13 +66,13 @@
                         <a href="/about"
                             class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50"
                             style="color: #1C2559;" @click="isOpen = false">Tentang Kami</a>
-                        <a href="#"
+                        <a href="/services"
                             class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50"
                             style="color: #1C2559;" @click="isOpen = false">Layanan</a>
-                        <a href="#"
+                        <a href="/projects"
                             class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50"
                             style="color: #1C2559;" @click="isOpen = false">Project</a>
-                        <a href="#"
+                        <a href="/contact"
                             class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-gray-50"
                             style="color: #1C2559;" @click="isOpen = false">Kontak</a>
                     </div>

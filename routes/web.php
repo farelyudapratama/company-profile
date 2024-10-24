@@ -16,3 +16,11 @@ Route::get('/contact', function () {
 });
 
 Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');
+
+Route::get('/projects', function () {
+    return view('projects');
+});
+
+Route::get('/services', function () {
+    return view('services');
+});
