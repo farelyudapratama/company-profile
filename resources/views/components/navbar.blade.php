@@ -1,12 +1,12 @@
-<header class="bg-gradient-to-r from-blue-600 to-blue-400 shadow-md relative" x-data="{ isOpen: false }">
+<header class="bg-gradient-to-r from-blue-400 to-blue-600 shadow-md relative" x-data="{ isOpen: false }">
     <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="flex lg:flex-1">
             <a href="/" class="-m-1.5 p-1.5 flex items-center group">
                 <span class="sr-only">Sigma Teknologi Inovasi Nusantara</span>
                 <img class="h-8 w-auto" src="{{ asset('img/sigmalogo.png') }}" alt="Company Logo">
                 <div class="ml-4 flex flex-col">
-                    <span class="text-xl font-bold text-red-100">Sigma Teknologi</span>
-                    <span class="text-sm font-semibold text-gray-200">Inovasi Nusantara</span>
+                    <span class="text-xl font-bold text-red-800">Sigma Teknologi</span>
+                    <span class="text-sm font-semibold text-gray-800">Inovasi Nusantara</span>
                 </div>
             </a>
         </div>

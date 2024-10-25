@@ -108,7 +108,7 @@
     <div class="p-4 md:p-6 rounded-lg mt-6 animate-on-scroll">
         <div class="flex items-center mb-6 animate-on-scroll">
             <i class="fas fa-users text-2xl text-blue-600 mr-3"></i>
-            <h2 class="text-xl md:text-2xl font-bold text-gray-800">Tim Kami</h2>
+            <h2 class="text-xl md:text-2xl font-bold text-gray-800 animate-bounce">Tim Kami</h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Project Manager -->
@@ -226,90 +226,105 @@
         </div>
     </div>
 
-    <div class="p-4 md:p-6 rounded-lg mt-6 animate-on-scroll">
-        <div class="flex items-center mb-6 animate-on-scroll">
-            <i class="fas fa-certificate text-2xl text-blue-600 mr-3"></i>
-            <h2 class="text-xl md:text-2xl font-bold text-gray-800">Sertifikat Kami</h2>
-        </div>
-        <div id="certificateGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-    </div>
-
-    <!-- Modal untuk menampilkan gambar besar -->
-    <div id="imageModal" class="z-50 fixed inset-0 bg-black bg-opacity-75 items-center justify-center hidden">
-        <span class="absolute top-4 right-4 text-white text-3xl cursor-pointer" onclick="closeModal()">&times;</span>
-        <img id="modalImage" class="max-w-full max-h-full">
-    </div>
-
-    <script>
-        const certificates = [{
-                src: 'img/sertif/sertif1.jpg',
-                alt: 'Sertifikat 1'
-            },
-            {
-                src: 'img/sertif/sertif2.jpg',
-                alt: 'Sertifikat 2'
-            },
-            {
-                src: 'img/sertif/sertif3.jpg',
-                alt: 'Sertifikat 3'
-            },
-            {
-                src: 'img/sertif/sertif4.jpg',
-                alt: 'Sertifikat 4'
-            },
-            {
-                src: 'img/sertif/sertif5.jpg',
-                alt: 'Sertifikat 5'
-            },
-            {
-                src: 'img/sertif/sertif6.jpg',
-                alt: 'Sertifikat 6'
-            },
-            {
-                src: 'img/sertif/sertif7.jpg',
-                alt: 'Sertifikat 7'
-            },
-        ];
-
-        function shuffleArray(array) {
-            for (let i = array.length - 1; i > 0; i--) {
+    <div class="p-6 md:p-8 lg:p-12 max-w-7xl mx-auto" x-data="{
+        certificates: {{ json_encode($certificates) }},
+        isOpen: false,
+        currentImageIndex: 0,
+        currentImageSrc: '',
+    
+        init() {
+            this.shuffleCertificates();
+    
+            window.addEventListener('keydown', (e) => {
+                if (!this.isOpen) return;
+    
+                if (e.key === 'ArrowLeft') this.prevImage();
+                if (e.key === 'ArrowRight') this.nextImage();
+                if (e.key === 'Escape') this.closeModal();
+            });
+        },
+    
+        shuffleCertificates() {
+            for (let i = this.certificates.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
+                [this.certificates[i], this.certificates[j]] = [this.certificates[j], this.certificates[i]];
             }
+        },
+    
+        openModal(index) {
+            this.currentImageIndex = index;
+            this.currentImageSrc = this.certificates[index].src;
+            this.isOpen = true;
+            document.body.style.overflow = 'hidden';
+        },
+    
+        closeModal() {
+            this.isOpen = false;
+            document.body.style.overflow = 'auto';
+        },
+    
+        nextImage() {
+            this.currentImageIndex = (this.currentImageIndex + 1) % this.certificates.length;
+            this.currentImageSrc = this.certificates[this.currentImageIndex].src;
+        },
+    
+        prevImage() {
+            this.currentImageIndex = (this.currentImageIndex - 1 + this.certificates.length) % this.certificates.length;
+            this.currentImageSrc = this.certificates[this.currentImageIndex].src;
         }
+    }">
+        <div class="flex items-center space-x-4 mb-8 border-b border-gray-200 pb-4 animate-on-scroll">
+            <div class="p-3 bg-blue-100 rounded-full">
+                <i class="fas fa-certificate text-2xl text-blue-600"></i>
+            </div>
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 animate-bounce">Sertifikat Kami
+            </h2>
+        </div>
 
-        function renderCertificates() {
-            const grid = document.getElementById('certificateGrid');
-            shuffleArray(certificates); // Acak urutan gambar
-
-            certificates.forEach(cert => {
-                const div = document.createElement('div');
-                div.className =
-                    'bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group';
-                div.innerHTML = `
-                    <div class="relative">
-                        <img src="${cert.src}" alt="${cert.alt}" class="w-full h-96 object-cover">
-                        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                            <i class="fas fa-search-plus text-white text-4xl cursor-pointer" onclick="openModal('${cert.src}')"></i>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <template x-for="(certificate, index) in certificates" :key="index">
+                <div
+                    class="group relative overflow-hidden rounded-xl shadow-md transition-all duration-300 hover:shadow-xl">
+                    <div class="aspect-[4/3] overflow-hidden">
+                        <img :src="certificate.src" :alt="certificate.alt"
+                            class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                            <div class="absolute bottom-0 left-0 right-0 p-4">
+                                <button @click="openModal(index)"
+                                    class="w-full rounded-lg bg-white/90 py-2 text-sm font-medium text-gray-900 backdrop-blur-sm transition-colors hover:bg-white">
+                                    <i class="fas fa-search-plus mr-2"></i>Lihat Detail
+                                </button>
+                            </div>
                         </div>
                     </div>
-                `;
-                grid.appendChild(div);
-            });
-        }
+                </div>
+            </template>
+        </div>
 
-        function openModal(imageSrc) {
-            document.getElementById("modalImage").src = imageSrc;
-            document.getElementById("imageModal").classList.remove("hidden");
-        }
+        <div x-show="isOpen" x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+            x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100"
+            x-transition:leave-end="opacity-0"
+            class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 backdrop-blur-sm"
+            x-cloak>
+            <div class="relative w-full h-full flex items-center justify-center p-4">
+                <button @click="closeModal" class="absolute top-4 right-4 text-white hover:text-gray-300 z-10">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
 
-        function closeModal() {
-            document.getElementById("imageModal").classList.add("hidden");
-        }
+                <button @click="prevImage" class="absolute left-4 text-white hover:text-gray-300 z-10">
+                    <i class="fas fa-chevron-left text-2xl"></i>
+                </button>
+                <button @click="nextImage" class="absolute right-4 text-white hover:text-gray-300 z-10">
+                    <i class="fas fa-chevron-right text-2xl"></i>
+                </button>
 
-        // Render gambar saat halaman dimuat
-        document.addEventListener('DOMContentLoaded', renderCertificates);
-    </script>
+                <img :src="currentImageSrc" class="max-w-[90%] max-h-[90vh] object-contain rounded-lg shadow-2xl">
+            </div>
+        </div>
+    </div>
+
 
 
 

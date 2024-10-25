@@ -1,8 +1,6 @@
 <footer class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
     <div class="max-w-7xl mx-auto">
-        <!-- Top Footer Section -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-6 py-12">
-            <!-- Company Info -->
             <div class="space-y-4">
                 <h3 class="text-white text-xl font-bold tracking-wider mb-3">PT. Sigma Teknologi Inovasi Nusantara</h3>
                 <p class="text-gray-400 text-sm leading-loose">
@@ -16,7 +14,6 @@
                 </div>
             </div>
 
-            <!-- Quick Links -->
             <div class="space-y-4">
                 <h3 class="text-white text-lg font-semibold tracking-wider mb-3">Layanan Kami</h3>
                 <ul class="space-y-2">
@@ -31,13 +28,12 @@
                 </ul>
             </div>
 
-            <!-- Contact Info -->
             <div class="space-y-4">
                 <h3 class="text-white text-lg font-semibold tracking-wider mb-3">Hubungi Kami</h3>
                 <div class="space-y-3">
                     <p class="flex items-center text-gray-400">
                         <i class="fas fa-map-marker-alt w-5 h-5 mr-3"></i>
-                        Jl. Vila Mas Garden, Perwira, Kec. Bekasi Utara
+                        Jl. Berlian 306, Vila Mas Garden, Kota Bekasi
                     </p>
                     <p class="flex items-center text-gray-400">
                         <i class="fas fa-envelope w-5 h-5 mr-3"></i>
@@ -50,23 +46,15 @@
                 </div>
             </div>
 
-            <!-- Newsletter -->
             <div class="space-y-4">
-                <h3 class="text-white text-lg font-semibold tracking-wider mb-3">Newsletter</h3>
-                <p class="text-gray-400 text-sm">Dapatkan info terbaru tentang layanan dan event kami.</p>
-                <form class="mt-4">
-                    <div class="flex max-w-md">
-                        <input type="email"
-                            class="w-full px-4 py-2 text-gray-900 bg-gray-100 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            placeholder="Email anda...">
-                        <button
-                            class="px-4 py-2 text-white bg-blue-600 rounded-r-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Kirim</button>
-                    </div>
-                </form>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.6093530724391!2d107.00881886960683!3d-6.205889966365447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6989567f198041%3A0xbc9af43b6461c609!2sJl.%20Vila%20Mas%20Garden%2C%20RT.007%2FRW.009%2C%20Perwira%2C%20Kec.%20Bekasi%20Utara%2C%20Kota%20Bks%2C%20Jawa%20Barat%2017122!5e0!3m2!1sid!2sid!4v1729733985318!5m2!1sid!2sid"
+                    class="w-full h-full rounded-lg" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
         </div>
 
-        <!-- Social Media Links -->
         <div class="border-t border-gray-700">
             <div class="flex flex-col md:flex-row justify-between items-center px-6 py-4">
                 <div class="text-gray-400 text-sm">

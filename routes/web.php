@@ -9,7 +9,17 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function () {
-    return view('about');
+    $certificates = [
+        ['src' => 'img/sertif/sertif1.jpg', 'alt' => 'Sertifikat 1'],
+        ['src' => 'img/sertif/sertif2.jpg', 'alt' => 'Sertifikat 2'],
+        ['src' => 'img/sertif/sertif3.jpg', 'alt' => 'Sertifikat 3'],
+        ['src' => 'img/sertif/sertif4.jpg', 'alt' => 'Sertifikat 4'],
+        ['src' => 'img/sertif/sertif5.jpg', 'alt' => 'Sertifikat 5'],
+        ['src' => 'img/sertif/sertif6.jpg', 'alt' => 'Sertifikat 6'],
+        ['src' => 'img/sertif/sertif7.jpg', 'alt' => 'Sertifikat 7'],
+    ];
+
+    return view('about', ['certificates' => $certificates]);
 });
 
 Route::get('/contact', function () {
