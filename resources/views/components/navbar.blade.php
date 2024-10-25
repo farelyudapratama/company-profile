@@ -27,18 +27,37 @@
             </button>
         </div>
 
-        <div class="ml-9 hidden lg:flex lg:gap-x-12">
-            <a href="/" class="text-base font-semibold leading-6 text-white hover:text-red-300">Home</a>
+        <div class="ml-9 hidden lg:flex lg:gap-x-6">
+            <a href="/"
+                class="text-base font-semibold leading-6 px-4 py-2 border rounded-lg 
+                      {{ Request::is('/') ? 'bg-blue-300 text-black border-blue-400' : 'text-white border-transparent hover:bg-gray-700' }}">
+                Home
+            </a>
             <a href="/about"
-                class="text-base font-semibold leading-6 text-white hover:text-red-300">@lang('navbar.about')</a>
+                class="text-base font-semibold leading-6 px-4 py-2 border rounded-lg 
+                      {{ Request::is('about') ? 'bg-blue-300 text-black border-blue-400' : 'text-white border-transparent hover:bg-gray-700' }}">
+                @lang('navbar.about')
+            </a>
             <a href="/services"
-                class="text-base font-semibold leading-6 text-white hover:text-red-300">@lang('navbar.services')</a>
+                class="text-base font-semibold leading-6 px-4 py-2 border rounded-lg 
+                      {{ Request::is('services') ? 'bg-blue-300 text-black border-blue-400' : 'text-white border-transparent hover:bg-gray-700' }}">
+                @lang('navbar.services')
+            </a>
             <a href="/projects"
-                class="text-base font-semibold leading-6 text-white hover:text-red-300">@lang('navbar.portfolio')</a>
+                class="text-base font-semibold leading-6 px-4 py-2 border rounded-lg 
+                      {{ Request::is('projects') ? 'bg-blue-300 text-black border-blue-400' : 'text-white border-transparent hover:bg-gray-700' }}">
+                @lang('navbar.portfolio')
+            </a>
             <a href="/contact"
-                class="text-base font-semibold leading-6 text-white hover:text-red-300">@lang('navbar.contact')</a>
+                class="text-base font-semibold leading-6 px-4 py-2 border rounded-lg 
+                      {{ Request::is('contact') ? 'bg-blue-300 text-black border-blue-400' : 'text-white border-transparent hover:bg-gray-700' }}">
+                @lang('navbar.contact')
+            </a>
         </div>
 
+
+
+        <!-- Desktop Language Switcher -->
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
             <div class="relative">
                 <button type="button" class="flex items-center text-white focus:outline-none"
@@ -49,18 +68,33 @@
                 </button>
                 <div x-show="isOpen" @click.away="isOpen = false"
                     class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50">
-                    <a href="locale/en" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <a href="locale/en"
+                        class="flex items-center px-4 py-2 text-sm {{ app()->getLocale() == 'en' ? 'bg-blue-50 text-blue-700' : 'text-gray-700 hover:bg-gray-100' }}">
                         <img src="{{ asset('img/flag_en.png') }}" alt="English" class="h-5 w-5 mr-2" />
                         English
+                        @if (app()->getLocale() == 'en')
+                            <svg class="ml-auto h-5 w-5 text-blue-700" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        @endif
                     </a>
-                    <a href="locale/id" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <a href="locale/id"
+                        class="flex items-center px-4 py-2 text-sm {{ app()->getLocale() == 'id' ? 'bg-blue-50 text-blue-700' : 'text-gray-700 hover:bg-gray-100' }}">
                         <img src="{{ asset('img/flag_id.png') }}" alt="Bahasa Indonesia" class="h-5 w-5 mr-2" />
                         Bahasa Indonesia
+                        @if (app()->getLocale() == 'id')
+                            <svg class="ml-auto h-5 w-5 text-blue-700" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        @endif
                     </a>
                 </div>
             </div>
         </div>
-
     </nav>
 
     <div class="lg:hidden fixed inset-0 z-40 bg-gray-900 bg-opacity-50 transition-opacity duration-300" x-show="isOpen"
@@ -76,20 +110,62 @@
                 <div class="-my-6 divide-y divide-gray-500/10">
                     <div class="space-y-2 py-6">
                         <a href="/"
-                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-blue-900 hover:bg-gray-100"
-                            @click="isOpen = false">Home</a>
+                            class="block px-4 py-3 text-base font-semibold border rounded-lg {{ Request::is('/') ? 'bg-blue-300 text-black border-blue-400' : 'text-blue-900 border-transparent hover:bg-gray-100' }}">
+                            Home
+                        </a>
                         <a href="/about"
-                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-blue-900 hover:bg-gray-100"
-                            @click="isOpen = false">@lang('navbar.about')</a>
+                            class="block px-4 py-3 text-base font-semibold border rounded-lg {{ Request::is('about') ? 'bg-blue-300 text-black border-blue-400' : 'text-blue-900 border-transparent hover:bg-gray-100' }}">
+                            @lang('navbar.about')
+                        </a>
                         <a href="/services"
-                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-blue-900 hover:bg-gray-100"
-                            @click="isOpen = false">@lang('navbar.services')</a>
+                            class="block px-4 py-3 text-base font-semibold border rounded-lg {{ Request::is('services') ? 'bg-blue-300 text-black border-blue-400' : 'text-blue-900 border-transparent hover:bg-gray-100' }}">
+                            @lang('navbar.services')
+                        </a>
                         <a href="/projects"
-                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-blue-900 hover:bg-gray-100"
-                            @click="isOpen = false">@lang('navbar.portfolio')</a>
+                            class="block px-4 py-3 text-base font-semibold border rounded-lg {{ Request::is('projects') ? 'bg-blue-300 text-black border-blue-400' : 'text-blue-900 border-transparent hover:bg-gray-100' }}">
+                            @lang('navbar.portfolio')
+                        </a>
                         <a href="/contact"
-                            class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-blue-900 hover:bg-gray-100"
-                            @click="isOpen = false">@lang('navbar.contact')</a>
+                            class="block px-4 py-3 text-base font-semibold border rounded-lg {{ Request::is('contact') ? 'bg-blue-300 text-black border-blue-400' : 'text-blue-900 border-transparent hover:bg-gray-100' }}">
+                            @lang('navbar.contact')
+                        </a>
+
+                        <div class="mt-6 pt-6 border-t border-gray-200">
+                            <div class="space-y-3">
+                                <span class="text-sm font-medium text-gray-500">Select Language</span>
+                                <div class="grid grid-cols-2 gap-3">
+                                    <a href="locale/en"
+                                        class="flex items-center space-x-2 p-2 rounded {{ app()->getLocale() == 'en' ? 'bg-blue-50 ring-2 ring-blue-500' : 'hover:bg-gray-100' }}">
+                                        <img src="{{ asset('img/flag_en.png') }}" alt="English" class="h-5 w-5" />
+                                        <span
+                                            class="text-sm {{ app()->getLocale() == 'en' ? 'text-blue-700 font-medium' : 'text-gray-700' }}">English</span>
+                                        @if (app()->getLocale() == 'en')
+                                            <svg class="ml-auto h-5 w-5 text-blue-700" viewBox="0 0 20 20"
+                                                fill="currentColor">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        @endif
+                                    </a>
+                                    <a href="locale/id"
+                                        class="flex items-center space-x-2 p-2 rounded {{ app()->getLocale() == 'id' ? 'bg-blue-50 ring-2 ring-blue-500' : 'hover:bg-gray-100' }}">
+                                        <img src="{{ asset('img/flag_id.png') }}" alt="Bahasa Indonesia"
+                                            class="h-5 w-5" />
+                                        <span
+                                            class="text-sm {{ app()->getLocale() == 'id' ? 'text-blue-700 font-medium' : 'text-gray-700' }}">Indonesia</span>
+                                        @if (app()->getLocale() == 'id')
+                                            <svg class="ml-auto h-5 w-5 text-blue-700" viewBox="0 0 20 20"
+                                                fill="currentColor">
+                                                <path fill-rule="evenodd"
+                                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        @endif
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

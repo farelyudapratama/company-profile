@@ -17,7 +17,7 @@ class LanguageMiddleware
      */
     public function handle($request, Closure $next)
     {
-        $locale = Session::get('locale') ?? 'en';
+        $locale = Session::get('locale') ?? 'id';
         Session::put('locale', $locale);
         App::setLocale($locale);
 
