@@ -1,5 +1,5 @@
 <x-layout>
-    <x-slot name="title">{{ 'Project yang pernah kami buat' }}</x-slot>
+    <x-slot name="title">PROJECT YANG PERNAH KAMI BUAT</x-slot>
 
     <div class="p-4 md:p-8 bg-gray-50 rounded-lg animate-on-scroll">
         <h2 class="text-2xl md:text-3xl font-bold text-gray-800 text-center mb-8">

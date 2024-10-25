@@ -1,10 +1,8 @@
 <x-layout>
-    <x-slot name="title">{{ 'LAYANAN KAMI' }}</x-slot>
+    <x-slot name="title">LAYANAN KAMI 🚀</x-slot>
 
     <div class="p-4 md:p-8 bg-gray-50 rounded-lg">
-        <h2 class="text-2xl md:text-3xl font-bold text-gray-800 text-center mb-8 animate-on-scroll">
-            Layanan Kami 🚀
-        </h2>
+
         <p class="text-gray-700 text-center mb-8 animate-on-scroll">
             Kami hadir untuk mendukung perjalanan digital bisnismu dengan berbagai layanan yang dirancang untuk memenuhi
             kebutuhanmu. Yuk, cek layanan yang kami tawarkan!

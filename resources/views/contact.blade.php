@@ -1,5 +1,5 @@
 <x-layout>
-    <x-slot name="title">{{ 'Mari Berkolaborasi Bersama Kami' }}</x-slot>
+    <x-slot name="title">KOLABORASI BARENG KAMI</x-slot>
 
     <!-- Hero Section -->
     <div class="max-w-6xl mx-auto px-4 py-12">
