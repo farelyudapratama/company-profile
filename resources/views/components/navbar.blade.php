@@ -1,5 +1,31 @@
-<header class="bg-gradient-to-r from-blue-400 to-blue-600 shadow-md relative" x-data="{ isOpen: false }">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+<header x-data="{
+    isOpen: false,
+    isSticky: false,
+    isVisible: true,
+    lastScroll: 0,
+    handleScroll() {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll < 100) {
+            this.isSticky = false;
+            this.isVisible = true;
+        } else {
+            if (currentScroll < this.lastScroll) {
+                this.isSticky = true;
+                this.isVisible = true;
+            } else {
+                this.isVisible = false;
+            }
+        }
+        this.lastScroll = currentScroll;
+    }
+}" @scroll.window="handleScroll" class="transition-all duration-300"
+    :class="[
+        isSticky ? 'bg-gradient-to-r from-blue-400 to-blue-600 py-2 shadow-lg' : 'bg-transparent',
+        isVisible ? 'fixed top-0 left-0 right-0 z-50 p-6 lg:px-8 opacity-100' :
+        'fixed top-0 left-0 right-0 z-50 opacity-0'
+    ]">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between" aria-label="Global">
         <div class="flex lg:flex-1">
             <a href="/" class="-m-1.5 p-1.5 flex items-center group">
                 <span class="sr-only">Sigma Teknologi Inovasi Nusantara</span>
@@ -55,9 +81,6 @@
             </a>
         </div>
 
-
-
-        <!-- Desktop Language Switcher -->
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
             <div class="relative">
                 <button type="button" class="flex items-center text-white focus:outline-none"

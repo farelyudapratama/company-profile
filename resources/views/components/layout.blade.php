@@ -80,9 +80,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-100 font-poppins" style="font-family: 'Poppins', sans-serif;">
+<body class="bg-gray-100 font-poppins m-0" style="font-family: 'Poppins', sans-serif;">
 
     <x-navbar></x-navbar>
+    <div class="bg-gradient-to-r from-blue-400 to-blue-600 shadow-md" style="padding: 48.24px"></div>
     @if (Request::path() !== '/')
         <x-hero-section title="{{ $title }}" />
     @endif
