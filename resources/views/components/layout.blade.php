@@ -80,7 +80,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-100 font-poppins m-0" style="font-family: 'Poppins', sans-serif;">
+<body class="bg-gray-100 font-poppins m-0" style="font-family: 'Poppins', sans-serif;" x-data="{ showBackToTop: false }"
+    @scroll.window="showBackToTop = window.pageYOffset > 300">
 
     <x-navbar></x-navbar>
     <div class="bg-gradient-to-r from-blue-400 to-blue-600 shadow-md" style="padding: 48.24px"></div>
@@ -95,6 +96,13 @@
     </main>
 
     <x-footer></x-footer>
+
+    <button @click="window.scrollTo({ top: 0, behavior: 'smooth' })" x-show="showBackToTop" x-transition
+        class="fixed bottom-14 right-5 bg-blue-500 text-white rounded-full p-3 shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-700"
+        style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
 </body>
 
 </html>
