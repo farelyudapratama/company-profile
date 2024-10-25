@@ -1,9 +1,9 @@
 <x-layout>
-    <x-slot name="title">PROJECT YANG PERNAH KAMI BUAT</x-slot>
+    <x-slot name="title">@lang('projects.title')</x-slot>
 
     <div class="p-4 md:p-8 bg-gray-50 rounded-lg animate-on-scroll">
         <h2 class="text-2xl md:text-3xl font-bold text-gray-800 text-center mb-8">
-            Proyek Kami <i class="fas fa-project-diagram text-blue-600"></i>
+            @lang('projects.header') <i class="fas fa-project-diagram text-blue-600"></i>
         </h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -23,8 +23,7 @@
                         </div>
                         <div class="mt-auto"> <!-- This ensures the button stays at bottom -->
                             <a href="/projects/{{ $project['slug'] }}"
-                                class="block w-full text-center bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-500 transition-colors">Lihat
-                                Detail</a>
+                                class="block w-full text-center bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-500 transition-colors">@lang('projects.button')</a>
                         </div>
                     </div>
                 </div>

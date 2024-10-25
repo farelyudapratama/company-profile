@@ -29,13 +29,38 @@
 
         <div class="ml-9 hidden lg:flex lg:gap-x-12">
             <a href="/" class="text-base font-semibold leading-6 text-white hover:text-red-300">Home</a>
-            <a href="/about" class="text-base font-semibold leading-6 text-white hover:text-red-300">Tentang Kami</a>
-            <a href="/services" class="text-base font-semibold leading-6 text-white hover:text-red-300">Layanan</a>
-            <a href="/projects" class="text-base font-semibold leading-6 text-white hover:text-red-300">Project</a>
-            <a href="/contact" class="text-base font-semibold leading-6 text-white hover:text-red-300">Kontak</a>
+            <a href="/about"
+                class="text-base font-semibold leading-6 text-white hover:text-red-300">@lang('navbar.about')</a>
+            <a href="/services"
+                class="text-base font-semibold leading-6 text-white hover:text-red-300">@lang('navbar.services')</a>
+            <a href="/projects"
+                class="text-base font-semibold leading-6 text-white hover:text-red-300">@lang('navbar.portfolio')</a>
+            <a href="/contact"
+                class="text-base font-semibold leading-6 text-white hover:text-red-300">@lang('navbar.contact')</a>
         </div>
 
-        <div class="hidden lg:flex lg:flex-1 lg:justify-end"></div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+            <div class="relative">
+                <button type="button" class="flex items-center text-white focus:outline-none"
+                    @click="isOpen = !isOpen">
+                    <span class="sr-only">Change Language</span>
+                    <img src="{{ asset('img/flag_' . app()->getLocale() . '.png') }}" alt="Language Flag"
+                        class="h-6 w-6 rounded" />
+                </button>
+                <div x-show="isOpen" @click.away="isOpen = false"
+                    class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50">
+                    <a href="locale/en" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        <img src="{{ asset('img/flag_en.png') }}" alt="English" class="h-5 w-5 mr-2" />
+                        English
+                    </a>
+                    <a href="locale/id" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        <img src="{{ asset('img/flag_id.png') }}" alt="Bahasa Indonesia" class="h-5 w-5 mr-2" />
+                        Bahasa Indonesia
+                    </a>
+                </div>
+            </div>
+        </div>
+
     </nav>
 
     <div class="lg:hidden fixed inset-0 z-40 bg-gray-900 bg-opacity-50 transition-opacity duration-300" x-show="isOpen"
@@ -55,16 +80,16 @@
                             @click="isOpen = false">Home</a>
                         <a href="/about"
                             class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-blue-900 hover:bg-gray-100"
-                            @click="isOpen = false">Tentang Kami</a>
+                            @click="isOpen = false">@lang('navbar.about')</a>
                         <a href="/services"
                             class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-blue-900 hover:bg-gray-100"
-                            @click="isOpen = false">Layanan</a>
+                            @click="isOpen = false">@lang('navbar.services')</a>
                         <a href="/projects"
                             class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-blue-900 hover:bg-gray-100"
-                            @click="isOpen = false">Project</a>
+                            @click="isOpen = false">@lang('navbar.portfolio')</a>
                         <a href="/contact"
                             class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-blue-900 hover:bg-gray-100"
-                            @click="isOpen = false">Kontak</a>
+                            @click="isOpen = false">@lang('navbar.contact')</a>
                     </div>
                 </div>
             </div>

@@ -3,10 +3,13 @@
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\LocaleController;
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('locale/{locale}', [LocaleController::class, 'setLocale']);
 
 Route::get('/about', function () {
     $certificates = [

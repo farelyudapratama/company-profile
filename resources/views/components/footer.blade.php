@@ -2,46 +2,50 @@
     <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-6 py-12">
             <div class="space-y-4">
-                <h3 class="text-white text-xl font-bold tracking-wider mb-3">PT. Sigma Teknologi Inovasi Nusantara</h3>
+                <h3 class="text-white text-xl font-bold tracking-wider mb-3">{{ __('footer.company_name') }}</h3>
                 <p class="text-gray-400 text-sm leading-loose">
-                    Kami mengembangkan solusi perangkat lunak dan aplikasi inovatif untuk kebutuhan bisnis Anda.
+                    {{ __('footer.company_description') }}
                 </p>
                 <div class="pt-2">
                     <a href="#" class="inline-flex items-center text-blue-400 hover:text-blue-300 transition">
-                        <span class="mr-2">Pelajari lebih lanjut</span>
+                        <span class="mr-2">{{ __('footer.learn_more') }}</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
 
             <div class="space-y-4">
-                <h3 class="text-white text-lg font-semibold tracking-wider mb-3">Layanan Kami</h3>
+                <h3 class="text-white text-lg font-semibold tracking-wider mb-3">{{ __('footer.services') }}</h3>
                 <ul class="space-y-2">
-                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Pengembangan
-                            Web</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Pengembangan
-                            Aplikasi</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Analisis
-                            Sistem</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Desain
-                            UI/UX</a></li>
+                    <li><a href="#"
+                            class="text-gray-400 hover:text-white transition duration-300">{{ __('footer.web_development') }}</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-gray-400 hover:text-white transition duration-300">{{ __('footer.app_development') }}</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-gray-400 hover:text-white transition duration-300">{{ __('footer.system_analysis') }}</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-gray-400 hover:text-white transition duration-300">{{ __('footer.ui_ux_design') }}</a>
+                    </li>
                 </ul>
             </div>
 
             <div class="space-y-4">
-                <h3 class="text-white text-lg font-semibold tracking-wider mb-3">Hubungi Kami</h3>
+                <h3 class="text-white text-lg font-semibold tracking-wider mb-3">{{ __('footer.contact_us') }}</h3>
                 <div class="space-y-3">
                     <p class="flex items-center text-gray-400">
                         <i class="fas fa-map-marker-alt w-5 h-5 mr-3"></i>
-                        Jl. Berlian 306, Vila Mas Garden, Kota Bekasi
+                        {{ __('footer.address') }}
                     </p>
                     <p class="flex items-center text-gray-400">
                         <i class="fas fa-envelope w-5 h-5 mr-3"></i>
-                        sigmasatein@gmail.com
+                        {{ __('footer.email') }}
                     </p>
                     <p class="flex items-center text-gray-400">
                         <i class="fas fa-phone w-5 h-5 mr-3"></i>
-                        +62 896 1324 082
+                        {{ __('footer.phone') }}
                     </p>
                 </div>
             </div>
@@ -58,7 +62,7 @@
         <div class="border-t border-gray-700">
             <div class="flex flex-col md:flex-row justify-between items-center px-6 py-4">
                 <div class="text-gray-400 text-sm">
-                    © 2024 PT. Sigma Teknologi Inovasi Nusantara. All rights reserved.
+                    {{ __('footer.copyright') }}
                 </div>
                 <div class="flex space-x-6 mt-4 md:mt-0">
                     <a href="#" class="text-gray-400 hover:text-white transition duration-300">
