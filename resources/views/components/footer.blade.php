@@ -9,7 +9,6 @@
                 <div class="pt-2">
                     <a href="#" class="inline-flex items-center text-blue-400 hover:text-blue-300 transition">
                         <span class="mr-2">{{ __('footer.learn_more') }}</span>
-                        <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </div>

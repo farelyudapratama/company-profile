@@ -23,28 +23,28 @@
             @lang('about.why_choose_us') <i class="fas fa-question-circle text-blue-600 mr-2"></i>
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
+            <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center animate-on-scroll">
                 <i class="fas fa-users text-4xl text-blue-600 mb-4"></i>
                 <h3 class="text-lg font-semibold text-gray-800">@lang('about.our_professionals')</h3>
                 <p class="text-sm text-gray-600 text-center">
                     @lang('about.professional_team')
                 </p>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
+            <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center animate-on-scroll">
                 <i class="fas fa-cogs text-4xl text-blue-600 mb-4"></i>
                 <h3 class="text-lg font-semibold text-gray-800">@lang('about.advanced_technology')</h3>
                 <p class="text-sm text-gray-600 text-center">
                     @lang('about.use_latest_tech')
                 </p>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
+            <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center animate-on-scroll">
                 <i class="fas fa-handshake text-4xl text-blue-600 mb-4"></i>
                 <h3 class="text-lg font-semibold text-gray-800">@lang('about.collaborative_approach')</h3>
                 <p class="text-sm text-gray-600 text-center">
                     @lang('about.effective_collaboration')
                 </p>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center">
+            <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center animate-on-scroll">
                 <i class="fas fa-leaf text-4xl text-blue-600 mb-4"></i>
                 <h3 class="text-lg font-semibold text-gray-800 text-center">@lang('about.sustainable_growth')</h3>
                 <p class="text-sm text-gray-600 text-center">
@@ -94,7 +94,7 @@
             <i class="fas fa-users text-2xl text-blue-600 mr-3"></i>
             <h2 class="text-xl md:text-2xl font-bold text-gray-800 animate-bounce">@lang('about.team')</h2>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-on-scroll">
             <!-- Project Manager -->
             <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
                 <div class="relative">
@@ -252,7 +252,7 @@
             </h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-on-scroll">
             <template x-for="(certificate, index) in certificates" :key="index">
                 <div
                     class="group relative overflow-hidden rounded-xl shadow-md transition-all duration-300 hover:shadow-xl">

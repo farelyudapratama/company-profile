@@ -2,15 +2,15 @@
 
 return [
     'title' => 'OUR SERVICES 🚀',
-    'intro_text' => 'We are here to support your business digital journey with various services designed to meet your needs. Let\'s check out the services we offer!',
+    'intro_text' => 'We’re here to support your digital journey with a range of services tailored to your needs. Check out what we offer below!',
     'services' => [
         'web_development' => [
             'title' => 'Web Development',
-            'description' => 'Create a cool website that is not only good, but also functional. Perfectly suited to your business needs!'
+            'description' => 'Let’s build a website that’s not only stylish but also functional—perfectly suited for your business needs!'
         ],
         'it_consultant' => [
             'title' => 'IT Consultant',
-            'description' => 'We are ready to help you with the right IT solutions, so that your business is more optimal and ready to compete!'
+            'description' => 'We’re here with the right IT solutions to make your business run smoother and stay competitive!'
         ],
         'software_development' => [
             'title' => 'Software Development',
@@ -18,10 +18,10 @@ return [
         ],
         'design_graphic' => [
             'title' => 'Design & Graphic',
-            'description' => 'We help you create cool visual designs, so that your brand is more striking and memorable!'
+            'description' => 'We’ll help you create awesome visuals that make your brand stand out and stay memorable!'
         ]
     ],
-    'testimonials_title' => 'What Do They Say? 💬',
+    'testimonials_title' => 'What Our Clients Say 💬',
     'testimonials' => [
         'client_a' => [
             'text' => 'The web development service from Sigma Technology really changed the way we do business! Thank you!',
@@ -33,7 +33,7 @@ return [
         ]
     ],
     'portfolio_title' => 'Our Portfolio 🎨',
-    'help_title' => 'Need Help? 💡',
+    'help_title' => 'Need a Hand? 💡',
     'help_text' => 'We are ready to help you find the best solution for your business. Contact us for a free consultation!',
-    'contact_button' => 'Contact Us'
+    'contact_button' => 'Get in Touch'
 ];

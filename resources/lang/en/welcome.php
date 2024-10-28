@@ -23,5 +23,5 @@ return [
 
     'help_title' => 'Need Help?',
     'help_description' => 'We’re here to help! Contact us and start your digital journey.',
-    'help_button' => 'Contact Us',
+    'help_button' => 'Get in Touch',
 ];

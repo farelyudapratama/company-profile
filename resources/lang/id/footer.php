@@ -3,7 +3,7 @@
 return [
     'company_name' => 'PT. Sigma Teknologi Inovasi Nusantara',
     'company_description' => 'Kami mengembangkan solusi perangkat lunak dan aplikasi inovatif untuk kebutuhan bisnis Anda.',
-    'learn_more' => 'Pelajari lebih lanjut',
+    'learn_more' => '',
     'services' => 'Layanan Kami',
     'web_development' => 'Pengembangan Web',
     'app_development' => 'Pengembangan Aplikasi',

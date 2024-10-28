@@ -67,7 +67,7 @@ Route::get('/projects', function () {
                 'title' => 'Library Booking System',
                 'description1' => 'Aplikasi web yang memungkinkan pembaca untuk meminjam buku dari perpustakaan. Sistem ini juga memungkinkan administrator untuk mengelola buku yang tersedia di perpustakaan.',
                 'description2' => 'Aplikasi ini mencakup fitur seperti pencarian buku, manajemen pemesanan, dan panel admin untuk mengelola inventaris buku. Aplikasi ini dirancang untuk mempermudah proses peminjaman buku dan pengelolaan sumber daya perpustakaan.',
-                'category' => 'Web Apps, Database, UI/UX Design',
+                'category' => 'UI/UX Design',
                 'image' => 'img/projects/project4.jpg'
             ],
             [
@@ -76,7 +76,7 @@ Route::get('/projects', function () {
                 'title' => 'Parking Management System',
                 'description1' => 'Aplikasi web yang memungkinkan pengguna untuk memeriksa kapasitas parkir, memesan tempat parkir, dan melakukan pembayaran.',
                 'description2' => 'Aplikasi ini menyediakan pembaruan waktu nyata tentang ketersediaan parkir, memungkinkan pengguna untuk memesan tempat parkir di muka, dan mendukung pembayaran online untuk biaya parkir. Dirancang untuk menyederhanakan proses parkir dan meningkatkan kenyamanan pengguna.',
-                'category' => 'Web Apps, Database, UI/UX Design, Real-time Systems, Payment Integration',
+                'category' => 'Web Apps, Database, UI/UX Design, Real-time Systems',
                 'image' => 'img/projects/project5.jpg'
             ],
             [
@@ -85,7 +85,7 @@ Route::get('/projects', function () {
                 'title' => 'Nearby Restaurant Finder',
                 'description1' => 'Aplikasi web yang memungkinkan pengguna untuk mencari restoran di sekitar mereka berdasarkan lokasi saat ini. Aplikasi ini menyediakan informasi tentang restoran, termasuk menu, ulasan, dan rating.',
                 'description2' => 'Aplikasi ini menggunakan teknologi geolokasi untuk menemukan restoran terdekat dan menampilkan hasil pencarian dalam peta interaktif. Pengguna dapat melihat detail restoran, membaca ulasan, dan memberikan rating.',
-                'category' => 'Web Apps, Geolocation, UI/UX Design',
+                'category' => 'Web Apps, UI/UX Design',
                 'image' => 'img/projects/project6.jpg'
             ]
         ]
@@ -127,7 +127,7 @@ Route::get('/projects/{slug}', function ($slug) {
             'title' => 'Library Booking System',
             'description1' => 'Aplikasi web yang memungkinkan pembaca untuk meminjam buku dari perpustakaan. Sistem ini juga memungkinkan administrator untuk mengelola buku yang tersedia di perpustakaan.',
             'description2' => 'Aplikasi ini mencakup fitur seperti pencarian buku, manajemen pemesanan, dan panel admin untuk mengelola inventaris buku. Aplikasi ini dirancang untuk mempermudah proses peminjaman buku dan pengelolaan sumber daya perpustakaan.',
-            'category' => 'Web Apps, Database, UI/UX Design',
+            'category' => 'UI/UX Design',
             'image' => asset('img/projects/project4.jpg')
         ],
         [
@@ -136,7 +136,7 @@ Route::get('/projects/{slug}', function ($slug) {
             'title' => 'Parking Management System',
             'description1' => 'Aplikasi web yang memungkinkan pengguna untuk memeriksa kapasitas parkir, memesan tempat parkir, dan melakukan pembayaran.',
             'description2' => 'Aplikasi ini menyediakan pembaruan waktu nyata tentang ketersediaan parkir, memungkinkan pengguna untuk memesan tempat parkir di muka, dan mendukung pembayaran online untuk biaya parkir. Dirancang untuk menyederhanakan proses parkir dan meningkatkan kenyamanan pengguna.',
-            'category' => 'Web Apps, Database, UI/UX Design, Real-time Systems, Payment Integration',
+            'category' => 'Web Apps, Database, UI/UX Design, Real-time Systems',
             'image' => asset('img/projects/project5.jpg')
         ],
         [
@@ -145,7 +145,7 @@ Route::get('/projects/{slug}', function ($slug) {
             'title' => 'Nearby Restaurant Finder',
             'description1' => 'Aplikasi web yang memungkinkan pengguna untuk mencari restoran di sekitar mereka berdasarkan lokasi saat ini. Aplikasi ini menyediakan informasi tentang restoran, termasuk menu, ulasan, dan rating.',
             'description2' => 'Aplikasi ini menggunakan teknologi geolokasi untuk menemukan restoran terdekat dan menampilkan hasil pencarian dalam peta interaktif. Pengguna dapat melihat detail restoran, membaca ulasan, dan memberikan rating.',
-            'category' => 'Web Apps, Geolocation, UI/UX Design',
+            'category' => 'Web Apps, UI/UX Design',
             'image' => asset('img/projects/project6.jpg')
         ]
     ];

@@ -26,7 +26,6 @@
         document.addEventListener('DOMContentLoaded', () => {
             gsap.registerPlugin(ScrollTrigger);
 
-            // Generic animation for all elements with the class 'animate-on-scroll'
             gsap.utils.toArray('.animate-on-scroll').forEach((element, index) => {
                 gsap.from(element, {
                     scrollTrigger: {
@@ -36,42 +35,13 @@
                     },
                     opacity: 0,
                     y: 50,
-                    duration: 0.6,
+                    duration: 0.4,
                     delay: index * 0.2
                 });
             });
-
-            gsap.utils.toArray('.grid-cols-1 > div').forEach((card, index) => {
-                gsap.from(card, {
-                    scrollTrigger: {
-                        trigger: card,
-                        start: 'top 85%',
-                        toggleActions: 'play none none reverse'
-                    },
-                    opacity: 0,
-                    y: 50,
-                    duration: 0.6,
-                    delay: index * 0.2
-                });
-            });
-
-            gsap.utils.toArray('.flex-wrap img').forEach((img, index) => {
-                gsap.from(img, {
-                    scrollTrigger: {
-                        trigger: img,
-                        start: 'top 85%',
-                        toggleActions: 'play none none reverse'
-                    },
-                    opacity: 0,
-                    y: 50,
-                    duration: 0.7,
-                    delay: index * 0.2
-                });
-            });
-
             gsap.to('html, body', {
                 scrollBehavior: 'smooth',
-                duration: 1
+                duration: 0.5
             });
         });
     </script>
