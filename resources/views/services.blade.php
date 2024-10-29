@@ -46,21 +46,6 @@
         </div>
 
         <h3 class="text-xl md:text-2xl font-bold text-gray-800 text-center mt-12 mb-6 animate-on-scroll">
-            @lang('services.testimonials_title')</h3>
-        <div class="flex flex-col items-center space-y-4 mb-8 animate-on-scroll">
-            <blockquote class="bg-gray-100 rounded-lg p-4 shadow-md max-w-md text-center animate-on-scroll">
-                <p class="text-gray-600">Layanan web development dari Sigma Teknologi benar-benar mengubah cara kami
-                    berbisnis! Terima kasih!</p>
-                <footer class="mt-2 text-gray-500">- Klien A</footer>
-            </blockquote>
-            <blockquote class="bg-gray-100 rounded-lg p-4 shadow-md max-w-md text-center animate-on-scroll">
-                <p class="text-gray-600">Tim IT Consultant sangat membantu dalam mengoptimalkan sistem kami. Sangat
-                    direkomendasikan!</p>
-                <footer class="mt-2 text-gray-500">- Klien B</footer>
-            </blockquote>
-        </div>
-
-        <h3 class="text-xl md:text-2xl font-bold text-gray-800 text-center mt-12 mb-6 animate-on-scroll">
             @lang('services.portfolio_title')</h3>
         <div class="flex flex-wrap justify-center gap-4 mb-8 animate-on-scroll">
             <img src="img/projects/project1.jpg" alt="Proyek 1" class="w-1/2 md:w-1/4 rounded-lg shadow-md">
