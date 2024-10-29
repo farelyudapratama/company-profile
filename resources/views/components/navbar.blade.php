@@ -32,7 +32,7 @@
                 <img class="h-8 w-auto" src="{{ asset('img/sigmalogo.png') }}" alt="Company Logo">
                 <div class="ml-4 flex flex-col">
                     <span class="text-xl font-bold text-red-800">Sigma Teknologi</span>
-                    <span class="text-sm font-semibold text-gray-800">Inovasi Nusantara</span>
+                    <span class="text-sm font-semibold text-white">Inovasi Nusantara</span>
                 </div>
             </a>
         </div>
