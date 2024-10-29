@@ -79,7 +79,7 @@
         <div class="text-center p-6 md:p-10 bg-[#0B2F9F] text-white animate-on-scroll">
             <h3 class="text-2xl md:text-3xl font-bold mb-4">@lang('welcome.help_title')</h3>
             <p class="mb-6">@lang('welcome.help_description')</p>
-            <a href="mailto:sigmatein@gmail.com"
+            <a href="mailto:sigmasatein@gmail.com"
                 class="inline-block bg-white text-[#0B2F9F] font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-gray-200 transition animate-pulse">@lang('welcome.help_button')</a>
         </div>
     </div>

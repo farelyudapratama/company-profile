@@ -24,7 +24,7 @@ return [
     'office_address' => 'Jl. Berlian 306, Vila Mas Garden, Kota Bekasi',
     'view_on_maps' => 'Lihat di Google Maps →',
     'call_us' => 'Hubungi Kami',
-    'phone_number' => '+62 896 1324 082',
+    'phone_number' => '+6285155431407',
     'whatsapp_service' => 'Tersedia layanan WhatsApp Business',
     'chat_whatsapp' => 'Chat WhatsApp →',
     'email' => 'Email',

@@ -12,6 +12,6 @@ return [
     'contact_us' => 'Contact Us',
     'address' => 'Jl. Berlian 306, Vila Mas Garden, Kota Bekasi',
     'email' => 'sigmasatein@gmail.com',
-    'phone' => '+62 896 1324 082',
+    'phone' => '+6285155431407',
     'copyright' => '© 2024 PT. Sigma Teknologi Inovasi Nusantara. All rights reserved.',
 ];
