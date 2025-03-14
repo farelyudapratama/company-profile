@@ -34,6 +34,6 @@ return [
     "lead_writer_quote" => "\"Our job is to create clear, easy-to-understand documentation. With our guides, users can make the most of the products we offer.\"",
     "lead_tester_quote" => "\"We make sure every product works perfectly before it reaches our clients. We test every aspect of the app to make sure there are no bugs and that it runs smoothly.\"",
 
-    "our_certificates" => "Our Certifications",
+    // "our_certificates" => "Our Certifications",
     "see_details" => "See Details"
 ];

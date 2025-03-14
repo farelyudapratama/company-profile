@@ -197,7 +197,7 @@
         </div>
     </div>
 
-    <div class="p-6 md:p-8 lg:p-12 max-w-7xl mx-auto" x-data="{
+    <!-- <div class="p-6 md:p-8 lg:p-12 max-w-7xl mx-auto" x-data="{
         certificates: {{ json_encode($certificates) }},
         isOpen: false,
         currentImageIndex: 0,
@@ -294,6 +294,6 @@
                 <img :src="currentImageSrc" class="max-w-[90%] max-h-[90vh] object-contain rounded-lg shadow-2xl">
             </div>
         </div>
-    </div>
+    </div> -->
 
 </x-layout>

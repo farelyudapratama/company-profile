@@ -34,6 +34,6 @@ return [
     "lead_writer_quote" => "\"Kami bertanggung jawab untuk menyusun dokumentasi yang jelas dan mudah dipahami. Dengan panduan yang kami buat, pengguna dapat memaksimalkan produk yang kami hadirkan.\"",
     "lead_tester_quote" => "\"Kami memastikan setiap produk berfungsi sempurna sebelum sampai ke tangan klien. Kami menguji setiap aspek aplikasi untuk memastikan tidak ada bug dan produk berjalan dengan optimal.\"",
 
-    "our_certificates" => "Sertifikat Kami",
+    // "our_certificates" => "Sertifikat Kami",
     "see_details" => "Lihat Detail"
 ];
